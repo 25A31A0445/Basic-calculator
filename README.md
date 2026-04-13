@@ -1,2 +1,41 @@
-# Basic-calculator
-this project is to perform basic operations like (+,-,*,/). like additions ,subtraction, multiplication, division.
+#include <stdio.h>
+
+int main() {
+    float a, b;
+    char operator;
+
+    printf("Enter first number: ");
+    scanf("%f", &a);
+
+    printf("Enter operator (+, -, *, /): ");
+    scanf(" %c", &operator);
+
+    printf("Enter second number: ");
+    scanf("%f", &b);
+
+    switch(operator) {
+        case '+':
+            printf("Result = %.2f\n", a + b);
+            break;
+
+        case '-':
+            printf("Result = %.2f\n", a - b);
+            break;
+
+        case '*':
+            printf("Result = %.2f\n", a * b);
+            break;
+
+        case '/':
+            if(b != 0)
+                printf("Result = %.2f\n", a / b);
+            else
+                printf("Error! Division by zero.\n");
+            break;
+
+        default:
+            printf("Invalid operator!\n");
+    }
+
+    return 0;
+}
